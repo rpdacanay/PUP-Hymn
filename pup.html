@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Polytechnic University of the Philippines</title>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ryan P. Dacanay">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="puplogo.png">
+</head>
+
+<body>
+
+  <div class="header">
+	<img src="header.png">
+  </div>
+  <div class="hymn">
+  <br>
+  <h1>Imno ng PUP </h1>
+
+  <h3>Polytechnic University of the Philippines </h3>
+
+  <marquee id="lyrics" scrollamount="1" direction="up" loop="1">
+  <p>~INSTRUMENTAL~</p><br><br><br><br>
+  <p>Sintang Paaralan</p>
+	<p>Tanglaw ka ng bayan</p>
+	<p>Pandayan ng isip ng kabataan</p>
+	<p>Kami ay dumating nang salat sa yaman</p>
+	<p>Hanap na dunong ay iyong alay</p>
+	<p>Ang layunin mong makatao</p>
+	<p>Dinarangal ang Pilipino</p>
+	<p>Ang iyong aral, diwa, adhikang taglay</p>
+	<p>PUP, aming gabay</p>
+	<p>Paaralang dakila</p>
+	<p>PUP, pinagpala</p>
+	<p>Gagamitin ang karunungan</p>
+	<p>Mula sa iyo, para sa bayan</p>
+	<p>Ang iyong aral, diwa, adhikang taglay</p>
+	<p>PUP, aming gabay</p>
+	<p>Paaralang dakila</p>
+	<p>PUP, pinagpala</p>
+	<br>
+  </marquee>
+  <div>
+	<audio id="audio" controls autoplay>
+		  <source src="puphymn.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+	</audio>
+  </div>
+  </div>
+
+  <script>
+      const lyricsaudio = document.getElementById("lyrics");
+      const audio = document.getElementById("audio");
+
+        audio.addEventListener("loadedmetadata", function() {
+        const scrollHeight = lyricsaudio.scrollHeight - lyricsaudio.offsetHeight;
+        audio.addEventListener("timeupdate", function() {
+          const currentTime = audio.currentTime;
+          const duration = audio.duration;
+          const progress = currentTime / duration;
+          const scrollTop = progress * scrollHeight;
+          lyricsaudio.scrollTop = scrollTop;
+        });
+      });
+
+      audio.addEventListener("play", function() {
+        lyricsaudio.start();
+      });
+
+      audio.addEventListener("pause", function() {
+        lyricsaudio.stop();
+      });
+	  
+	    window.onload = function(){
+        lyricsaudio.stop();
+     }
+  </script>
+</body>
+</html>

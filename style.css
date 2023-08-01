@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+    body {
+        margin: 0;
+        font-family: Poppins;
+	    color: maroon;
+        background-image: url("pupbg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }   
+
+    audio {
+        padding-top:60px;
+        padding-bottom: 18px;
+        width: 100%;
+    }
+
+    #lyrics {
+        width:700px;
+        height: 380px;
+        overflow: hidden;
+        text-align: center;
+        font-size: 25px;
+      }
+
+	.hymn {
+        display: block;
+        position: relative;
+        width: 700px;
+        height: 570px;
+        margin: auto;
+        margin-top: 1%;
+        border-radius: 10px 10px 10px 10px;
+        border-style: solid;
+        background: transparent linear-gradient(to bottom,rgb(248, 247, 247) 50%,rgb(248, 246, 246) 70%) repeat scroll 0 0;
+}
+	h1 {
+        margin:5px;
+        font-size: 34px;
+        color: white;
+        background-color: maroon;
+        padding: 0 10%;
+        text-align: center;
+}
+    h3 {
+        margin: 0;
+        font-size: 17px;
+        font-weight: 500;
+        height: 50px;
+        color: black;
+        padding: 0 10%;
+        text-align: center;
+}
+    .header img{
+        height: 75px;
+        width: 1263px;
+        margin: 0;
+        font-size: 17px;
+        font-weight: 500;
+}
